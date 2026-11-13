@@ -2,7 +2,7 @@
 
 A Windows VST3 instrument that plays [Magenta RealTime 2](https://magenta.tensorflow.org/mrt2) from a DAW such as Ableton Live.
 
-Google's own MRT2 plugin is a macOS Audio Unit for Apple Silicon only, and the model needs a GPU with at least 12 GB. So this plugin doesn't run the model itself. It runs on a GPU server (enki), and the plugin talks to it over the network:
+Google's own MRT2 plugin is a macOS Audio Unit for Apple Silicon only, and the model needs a GPU with at least 12 GB. So this plugin doesn't run the model itself. It runs on a GPU server and the plugin talks to it over the network:
 
 ```
 Ableton ──MIDI──▶ MRT2 Remote (VST3) ──WebSocket: held notes + settings──▶ Magenta jam server on enki (magenta.yaml)
